@@ -1,0 +1,3 @@
+[35m[1mConsolidate compiler generated dependencies of target figure8[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/figure8.dir/src/figure8_node.cpp.o[0m
+[ 75%] Built target offboard_control

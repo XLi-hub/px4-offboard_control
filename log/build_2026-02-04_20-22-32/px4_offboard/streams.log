@@ -1,0 +1,22 @@
+[0.007s] Invoking command in '/home/xli/px4_ws2/build/px4_offboard': CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/px4_ws2/install/px4_offboard:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24
+[0.030s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.131s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.156s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.158s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.163s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.171s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.181s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.208s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.210s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.289s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.329s] -- Found px4_msgs: 2.0.1 (/home/xli/px4_ws2/install/px4_msgs/share/px4_msgs/cmake)
+[0.338s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[0.338s]   ament_target_dependencies() the first argument must be a valid target name
+[0.338s] Call Stack (most recent call first):
+[0.338s]   CMakeLists.txt:19 (ament_target_dependencies)
+[0.338s] 
+[0.338s] [0m
+[0.338s] -- Configuring incomplete, errors occurred!
+[0.338s] See also "/home/xli/px4_ws2/build/px4_offboard/CMakeFiles/CMakeOutput.log".
+[0.342s] gmake: *** [Makefile:267：cmake_check_build_system] 错误 1
+[0.344s] Invoked command in '/home/xli/px4_ws2/build/px4_offboard' returned '2': CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/px4_ws2/install/px4_offboard:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24

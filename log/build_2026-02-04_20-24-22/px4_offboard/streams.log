@@ -1,0 +1,34 @@
+[0.008s] Invoking command in '/home/xli/px4_ws2/build/px4_offboard': CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/px4_ws2/install/px4_offboard:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24
+[0.027s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.114s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.132s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.134s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.138s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.144s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.152s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.172s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.173s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.247s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.283s] -- Found px4_msgs: 2.0.1 (/home/xli/px4_ws2/install/px4_msgs/share/px4_msgs/cmake)
+[0.298s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.346s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.346s] -- Configured cppcheck include dirs: 
+[0.346s] -- Configured cppcheck exclude dirs and/or files: 
+[0.347s] -- Added test 'lint_cmake' to check CMake code style
+[0.347s] -- Added test 'uncrustify' to check C / C++ code style
+[0.347s] -- Configured uncrustify additional arguments: 
+[0.347s] -- Added test 'xmllint' to check XML markup files
+[0.348s] -- Configuring done
+[0.355s] -- Generating done
+[0.358s] -- Build files have been written to: /home/xli/px4_ws2/build/px4_offboard
+[0.376s] [35m[1mConsolidate compiler generated dependencies of target offboard_control[0m
+[0.383s] [ 25%] [32mBuilding CXX object CMakeFiles/figure8.dir/src/figure8_node.cpp.o[0m
+[0.393s] [ 75%] Built target offboard_control
+[1.875s] [01m[K/home/xli/px4_ws2/src/px4_offboard/src/figure8_node.cpp:[m[K In member function ‘[01m[Kvoid Figure8Control::timer_callback()[m[K’:
+[1.876s] [01m[K/home/xli/px4_ws2/src/px4_offboard/src/figure8_node.cpp:91:25:[m[K [01;31m[Kerror: [m[K‘[01m[KOffboardControl[m[K’ was not declared in this scope
+[1.876s]    91 |             z = -5.0;   [01;31m[KOffboardControl[m[K() : Node("offboard_control")
+[1.876s]       |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.544s] gmake[2]: *** [CMakeFiles/figure8.dir/build.make:76：CMakeFiles/figure8.dir/src/figure8_node.cpp.o] 错误 1
+[2.544s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/figure8.dir/all] 错误 2
+[2.544s] gmake: *** [Makefile:146：all] 错误 2
+[2.546s] Invoked command in '/home/xli/px4_ws2/build/px4_offboard' returned '2': CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/px4_ws2/install/px4_offboard:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24

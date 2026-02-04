@@ -1,0 +1,7 @@
+[01m[K/home/xli/px4_ws2/src/px4_offboard/src/figure8_node.cpp:[m[K In member function ‘[01m[Kvoid Figure8Control::timer_callback()[m[K’:
+[01m[K/home/xli/px4_ws2/src/px4_offboard/src/figure8_node.cpp:91:25:[m[K [01;31m[Kerror: [m[K‘[01m[KOffboardControl[m[K’ was not declared in this scope
+   91 |             z = -5.0;   [01;31m[KOffboardControl[m[K() : Node("offboard_control")
+      |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/figure8.dir/build.make:76：CMakeFiles/figure8.dir/src/figure8_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/figure8.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

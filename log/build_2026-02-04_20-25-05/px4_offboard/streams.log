@@ -1,0 +1,12 @@
+[0.007s] Invoking command in '/home/xli/px4_ws2/build/px4_offboard': AMENT_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/xli/px4_ws2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xli/px4_ws2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24
+[0.035s] [35m[1mConsolidate compiler generated dependencies of target figure8[0m
+[0.047s] [ 50%] [32mBuilding CXX object CMakeFiles/figure8.dir/src/figure8_node.cpp.o[0m
+[0.047s] [ 75%] Built target offboard_control
+[1.479s] [01m[K/home/xli/px4_ws2/src/px4_offboard/src/figure8_node.cpp:[m[K In member function ‘[01m[Kvoid Figure8Control::timer_callback()[m[K’:
+[1.479s] [01m[K/home/xli/px4_ws2/src/px4_offboard/src/figure8_node.cpp:91:25:[m[K [01;31m[Kerror: [m[K‘[01m[KOffboardControl[m[K’ was not declared in this scope
+[1.479s]    91 |             z = -5.0;   [01;31m[KOffboardControl[m[K() : Node("offboard_control")
+[1.479s]       |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[2.134s] gmake[2]: *** [CMakeFiles/figure8.dir/build.make:76：CMakeFiles/figure8.dir/src/figure8_node.cpp.o] 错误 1
+[2.134s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/figure8.dir/all] 错误 2
+[2.134s] gmake: *** [Makefile:146：all] 错误 2
+[2.135s] Invoked command in '/home/xli/px4_ws2/build/px4_offboard' returned '2': AMENT_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/xli/px4_ws2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xli/px4_ws2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24

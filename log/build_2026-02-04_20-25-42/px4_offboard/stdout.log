@@ -1,0 +1,24 @@
+Consolidate compiler generated dependencies of target figure8
+[ 50%] Built target offboard_control
+[ 75%] Building CXX object CMakeFiles/figure8.dir/src/figure8_node.cpp.o
+[100%] Linking CXX executable figure8
+[100%] Built target figure8
+-- Install configuration: ""
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/lib/px4_offboard/offboard_control
+-- Installing: /home/xli/px4_ws2/install/px4_offboard/lib/px4_offboard/figure8
+-- Set runtime path of "/home/xli/px4_ws2/install/px4_offboard/lib/px4_offboard/figure8" to ""
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/ament_index/resource_index/package_run_dependencies/px4_offboard
+-- Installing: /home/xli/px4_ws2/install/px4_offboard/share/ament_index/resource_index/parent_prefix_path/px4_offboard
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/ament_prefix_path.sh
+-- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/path.sh
+-- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/path.dsv
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.bash
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.sh
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.zsh
+-- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.dsv
+-- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/package.dsv
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/ament_index/resource_index/packages/px4_offboard
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/cmake/px4_offboardConfig.cmake
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/cmake/px4_offboardConfig-version.cmake
+-- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/package.xml

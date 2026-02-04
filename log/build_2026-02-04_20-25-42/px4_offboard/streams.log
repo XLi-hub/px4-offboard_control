@@ -1,0 +1,28 @@
+[0.007s] Invoking command in '/home/xli/px4_ws2/build/px4_offboard': AMENT_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/xli/px4_ws2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xli/px4_ws2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24
+[0.037s] Consolidate compiler generated dependencies of target figure8
+[0.045s] [ 50%] Built target offboard_control
+[0.047s] [ 75%] Building CXX object CMakeFiles/figure8.dir/src/figure8_node.cpp.o
+[3.144s] [100%] Linking CXX executable figure8
+[3.300s] [100%] Built target figure8
+[3.306s] Invoked command in '/home/xli/px4_ws2/build/px4_offboard' returned '0': AMENT_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/xli/px4_ws2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xli/px4_ws2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/xli/px4_ws2/build/px4_offboard -- -j24 -l24
+[3.307s] Invoking command in '/home/xli/px4_ws2/build/px4_offboard': AMENT_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/xli/px4_ws2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xli/px4_ws2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/xli/px4_ws2/build/px4_offboard
+[3.312s] -- Install configuration: ""
+[3.314s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/lib/px4_offboard/offboard_control
+[3.314s] -- Installing: /home/xli/px4_ws2/install/px4_offboard/lib/px4_offboard/figure8
+[3.315s] -- Set runtime path of "/home/xli/px4_ws2/install/px4_offboard/lib/px4_offboard/figure8" to ""
+[3.315s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/ament_index/resource_index/package_run_dependencies/px4_offboard
+[3.315s] -- Installing: /home/xli/px4_ws2/install/px4_offboard/share/ament_index/resource_index/parent_prefix_path/px4_offboard
+[3.315s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/ament_prefix_path.sh
+[3.315s] -- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/ament_prefix_path.dsv
+[3.315s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/path.sh
+[3.315s] -- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/environment/path.dsv
+[3.315s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.bash
+[3.315s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.sh
+[3.315s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.zsh
+[3.315s] -- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/local_setup.dsv
+[3.315s] -- Installing: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/package.dsv
+[3.316s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/ament_index/resource_index/packages/px4_offboard
+[3.316s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/cmake/px4_offboardConfig.cmake
+[3.316s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/cmake/px4_offboardConfig-version.cmake
+[3.316s] -- Up-to-date: /home/xli/px4_ws2/install/px4_offboard/share/px4_offboard/package.xml
+[3.317s] Invoked command in '/home/xli/px4_ws2/build/px4_offboard' returned '0': AMENT_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xli/px4_ws2/install/px4_msgs:/home/xli/Prometheus/install/quadrotor_msgs:/home/xli/Prometheus/install/prometheus_uav_control:/home/xli/Prometheus/install/prometheus_msgs:/home/xli/ws_ros2/install/px4_ros_com:/home/xli/ws_ros2/install/px4_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/xli/px4_ws2/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xli/px4_ws2/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/xli/px4_ws2/build/px4_offboard
