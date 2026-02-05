@@ -3,6 +3,8 @@
 #include <chrono>
 #include <iostream>
 #include <cmath> // 用于 sin, cos, atan2
+#include <signal.h>  
+#include <thread>    /* 线程 */
 
 #include <px4_msgs/msg/offboard_control_mode.hpp>
 #include <px4_msgs/msg/trajectory_setpoint.hpp>
@@ -11,6 +13,10 @@
 #include <px4_msgs/msg/vehicle_status.hpp>
 
 using namespace std::chrono_literals;
+
+// 前置声明和全局指针，为了让信号处理函数能找到节点
+class Figure8Control;
+std::shared_ptr<Figure8Control> g_node = nullptr;
 
 class Figure8Control : public rclcpp::Node
 {
@@ -33,6 +39,14 @@ public:
             50ms, std::bind(&Figure8Control::timer_callback, this));
 
         RCLCPP_INFO(this->get_logger(), "Figure 8 Node Started!");
+    }
+
+    // 处理 Ctrl+C 信号，安全降落
+    void land()
+    {
+        RCLCPP_WARN(this->get_logger(), "Ctrl+C detected! Landing...");
+        // 发送降落指令 (VEHICLE_CMD_NAV_LAND = 21)
+        publish_vehicle_command(px4_msgs::msg::VehicleCommand::VEHICLE_CMD_NAV_LAND);
     }
 
 private:
@@ -151,10 +165,30 @@ private:
     double delta_theta_ = 0.02; // 每次更新的角度增量 (决定飞行速度)
 };
 
+// 信号处理函数
+void signal_handler(int signum)
+{
+    (void)signum;
+    if (g_node) {
+        g_node->land(); // 调用降落
+        // 等待200ms确保指令发出去
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+    }
+    rclcpp::shutdown();
+    exit(0);
+}
 int main(int argc, char *argv[])
 {
-    rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<Figure8Control>());
+    // 禁用 ROS 默认的信号处理
+    rclcpp::init(argc, argv, rclcpp::InitOptions(), rclcpp::SignalHandlerOptions::None);
+    
+    // 注册我们的 Ctrl+C 处理器
+    signal(SIGINT, signal_handler);
+
+    // 赋值给全局指针
+    g_node = std::make_shared<Figure8Control>();
+    
+    rclcpp::spin(g_node);
     rclcpp::shutdown();
     return 0;
 }
