@@ -78,7 +78,7 @@ def main():
 
     # 动画更新函数
     def update(frame):
-        # 将数据转为 list 绘图
+        # 将数据转为 list
         t = list(plotter.time_data)
         x = list(plotter.x_data)
         y = list(plotter.y_data)
@@ -86,20 +86,31 @@ def main():
         if not t:
             return line_xt, line_yt, line_xy
 
-        # 更新 X-T
+        # 1. 更新 X-T 图 (保持 10秒 滚动窗口)
         line_xt.set_data(t, x)
-        ax1.set_xlim(max(0, t[-1] - 10), t[-1] + 1) # 滚动窗口 10秒
-        ax1.set_ylim(min(x)-1, max(x)+1)
+        ax1.set_xlim(max(0, t[-1] - 10), t[-1] + 1)
+        # Y轴自动适应数据范围，并留出 1m 边距
+        if x: ax1.set_ylim(min(x)-1, max(x)+1)
 
-        # 更新 Y-T
+        # 2. 更新 Y-T 图
         line_yt.set_data(t, y)
         ax2.set_xlim(max(0, t[-1] - 10), t[-1] + 1)
-        ax2.set_ylim(min(y)-1, max(y)+1)
+        if y: ax2.set_ylim(min(y)-1, max(y)+1)
 
-        # 更新 X-Y
-        line_xy.set_data(y, x) # 注意这里我把 Y(East) 作为横轴，X(North) 作为纵轴，符合地图直觉
-        ax3.set_xlim(-6, 6) # 固定范围，方便观察 8 字
-        ax3.set_ylim(-6, 6)
+        # 3. 更新 X-Y 图 (智能缩放)
+        # 注意：地图视角通常 Y(East) 是横轴，X(North) 是纵轴
+        line_xy.set_data(y, x) 
+        
+        if x and y:
+            # 找出当前飞行的最大范围（绝对值）
+            # 比如飞到了 5.0米，max_dist 就是 5.0
+            max_dist = max(max([abs(v) for v in x]), max([abs(v) for v in y]))
+            
+            # 设置视窗大小：至少显示 +/- 2米，否则取最大距离 + 2米边距
+            limit = max(2.0, max_dist + 2.0)
+            
+            ax3.set_xlim(-limit, limit)
+            ax3.set_ylim(-limit, limit)
 
         return line_xt, line_yt, line_xy
 
