@@ -33,11 +33,22 @@ px4_ros_ws/
         ├── src/
         │   ├── offboard_control.cpp # 基础起飞代码
         │   └── figure8_node.cpp     # 飞8字代码
+        │   └── plot_trajectory.py      # 轨迹可视化脚本
         ├── CMakeLists.txt
         └── package.xml
 ```
 
 ---
+
+## 📉 核心改进说明
+### 轨迹可视化观察
+
+在实际研究中，我们发现仅仅观察仿真器中的无人机运动是不够的。通过 Matplotlib 绘制的实时曲线，我们可以更直观地分析 PID 控制器的性能。该绘图脚本会自动保存无人机的历史坐标，并在窗口中实时刷新展示。
+
+### 安全退出机制
+
+如何安全地停止飞行任务？我们在 C++ 代码中加入了信号捕获逻辑。当你按下 Ctrl+C 时，程序会向 PX4 发送最后一条指令：切换至 Land (降落) 模式。这避免了因为程序突然中断而导致的无人机失控风险。
+
 
 ## 🔨 安装与编译
 
@@ -67,21 +78,27 @@ px4_ros_ws/
 
 请按照以下顺序打开终端运行：
 
-### 1. 启动 MicroXRCE-DDS Agent
-```bash
-MicroXRCEAgent udp4 -p 8888
-```
-
-### 2. 启动 PX4 SITL 仿真
+### 1. 启动 PX4 SITL 仿真
 在你的 `PX4-Autopilot` 源码目录下：
 ```bash
-make px4_sitl gazebo-classic
+make px4_sitl gazebo-x_500
+```
+
+### 2. 启动 MicroXRCE-DDS Agent
+```bash
+MicroXRCEAgent udp4 -p 8888
 ```
 
 ### 3. 运行 8 字飞行节点
 ```bash
 source ~/px4_ros_ws/install/setup.bash
 ros2 run px4_offboard figure8_node
+```
+
+### 4. 运行可视化界面
+```bash
+source ~/px4_ros_ws/install/setup.bash
+python3 plot_trajectory.py(这个脚本会自动保存无人机历史轨迹，并实时显示)
 ```
 
 ---
